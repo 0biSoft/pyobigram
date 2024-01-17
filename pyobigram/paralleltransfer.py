@@ -44,7 +44,7 @@ class DownloadSender:
                  stride: int, count: int) -> None:
         self.sender = sender
         self.client = client
-        self.request = GetFileRequest(file, offset=offset, limit=limit)
+        self.request = GetFileRequest(file, offset=offset, limit=limit,precise=True,cdn_supported=True)
         self.stride = stride
         self.remaining = count
 
